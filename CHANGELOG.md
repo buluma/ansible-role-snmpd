@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-snmpd/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-snmpd/compare/v0.1.1...HEAD)
+
+**Merged pull requests:**
+
+- Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.4 to 1.0.5 [\#3](https://github.com/buluma/ansible-role-snmpd/pull/3) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.1.1](https://github.com/buluma/ansible-role-snmpd/tree/v0.1.1) (2022-04-18)
 
 [Full Changelog](https://github.com/buluma/ansible-role-snmpd/compare/v0.1.0...v0.1.1)

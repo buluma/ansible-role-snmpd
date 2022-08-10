@@ -126,9 +126,9 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |container|tags|
 |---------|----|
 |alpine|all|
-|amazon|all|
+|amazon|Candidate|
+|el|all|
 |debian|all|
-|el|8|
 |fedora|all|
 |opensuse|all|
 |ubuntu|all|

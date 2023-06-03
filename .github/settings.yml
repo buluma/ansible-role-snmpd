@@ -5,4 +5,4 @@
 repository:
   description: Install and configure snmpd on your system.
   homepage: https://buluma.github.io/
-  topics: snmpd, ansible, molecule, tox, playbook, hacktoberfest
+  topics: snmpd, ansible, molecule, tox, playbook

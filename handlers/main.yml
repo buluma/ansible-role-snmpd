@@ -5,8 +5,3 @@
   ansible.builtin.service:
     name: "{{ snmpd_service }}"
     state: restarted
-
-- name: Remove snmpwalk
-  ansible.builtin.service:
-    name: snmpwalk
-    state: absent

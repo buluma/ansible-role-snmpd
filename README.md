@@ -1,10 +1,10 @@
-# [snmpd](#snmpd)
+# [Ansible role snmpd](#snmpd)
 
 Install and configure snmpd on your system.
 
-|GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
-|------|------|-------|---------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-snmpd/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-snmpd/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-snmpd/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-snmpd)|[![quality](https://img.shields.io/ansible/quality/58837)](https://galaxy.ansible.com/buluma/snmpd)|[![downloads](https://img.shields.io/ansible/role/d/58837)](https://galaxy.ansible.com/buluma/snmpd)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-snmpd.svg)](https://github.com/buluma/ansible-role-snmpd/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-snmpd.svg)](https://github.com/buluma/ansible-role-snmpd/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-snmpd.svg)](https://github.com/buluma/ansible-role-snmpd/pulls/)|
+|GitHub|GitLab|Downloads|Version|Issues|Pull Requests|
+|------|------|-------|-------|------|-------------|
+|[![github](https://github.com/buluma/ansible-role-snmpd/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-snmpd/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-snmpd/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-snmpd)|[![downloads](https://img.shields.io/ansible/role/d/4836)](https://galaxy.ansible.com/buluma/snmpd)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-snmpd.svg)](https://github.com/buluma/ansible-role-snmpd/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-snmpd.svg)](https://github.com/buluma/ansible-role-snmpd/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-snmpd.svg)](https://github.com/buluma/ansible-role-snmpd/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 

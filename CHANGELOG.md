@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-snmpd/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-snmpd/compare/v0.1.3...HEAD)
+
+**Closed issues:**
+
+- Update action [\#9](https://github.com/buluma/ansible-role-snmpd/issues/9)
+
 ## [v0.1.3](https://github.com/buluma/ansible-role-snmpd/tree/v0.1.3) (2022-08-10)
 
 [Full Changelog](https://github.com/buluma/ansible-role-snmpd/compare/v0.1.2...v0.1.3)

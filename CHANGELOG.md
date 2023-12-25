@@ -6,6 +6,7 @@
 
 **Closed issues:**
 
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#10](https://github.com/buluma/ansible-role-snmpd/issues/10)
 - Update action [\#9](https://github.com/buluma/ansible-role-snmpd/issues/9)
 
 ## [v0.1.3](https://github.com/buluma/ansible-role-snmpd/tree/v0.1.3) (2022-08-10)

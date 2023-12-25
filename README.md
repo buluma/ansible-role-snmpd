@@ -1,10 +1,10 @@
-# [Ansible role snmpd](#snmpd)
+# Ansible role [snmpd](https://galaxy.ansible.com/ui/standalone/roles/buluma/snmpd/documentation)
 
 Install and configure snmpd on your system.
 
-|GitHub|GitLab|Downloads|Version|Issues|Pull Requests|
-|------|------|-------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-snmpd/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-snmpd/actions/workflows/molecule.yml)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-snmpd/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-snmpd)|[![downloads](https://img.shields.io/ansible/role/d/4836)](https://galaxy.ansible.com/buluma/snmpd)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-snmpd.svg)](https://github.com/buluma/ansible-role-snmpd/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-snmpd.svg)](https://github.com/buluma/ansible-role-snmpd/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-snmpd.svg)](https://github.com/buluma/ansible-role-snmpd/pulls/)|
+|GitHub|Version|Issues|Pull Requests|Downloads|
+|------|-------|------|-------------|---------|
+|[![github](https://github.com/buluma/ansible-role-snmpd/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-snmpd/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-snmpd.svg)](https://github.com/buluma/ansible-role-snmpd/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-snmpd.svg)](https://github.com/buluma/ansible-role-snmpd/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-snmpd.svg)](https://github.com/buluma/ansible-role-snmpd/pulls/)|[![Ansible Role](https://img.shields.io/ansible/role/d/buluma/snmpd)](https://galaxy.ansible.com/ui/standalone/roles/buluma/snmpd/documentation)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -111,9 +111,9 @@ snmpd_load:
 
 The following roles are used to prepare a system. You can prepare your system in another way.
 
-| Requirement | GitHub | GitLab |
+| Requirement | GitHub | Version |
 |-------------|--------|--------|
-|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-bootstrap/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-bootstrap)|
+|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Ansible Molecule](https://github.com/buluma/ansible-role-bootstrap/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-bootstrap.svg)](https://github.com/shadowwalker/ansible-role-bootstrap)|
 
 ## [Context](#context)
 
@@ -137,7 +137,7 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |[opensuse](https://hub.docker.com/repository/docker/buluma/opensuse/general)|all|
 |[Ubuntu](https://hub.docker.com/repository/docker/buluma/ubuntu/general)|all|
 
-The minimum version of Ansible required is 2.10, tests have been done to:
+The minimum version of Ansible required is 2.12, tests have been done to:
 
 - The previous version.
 - The current version.
@@ -151,14 +151,11 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 ## [License](#license)
 
-[Apache-2.0](https://github.com/buluma/ansible-role-snmpd/blob/master/LICENSE).
+[Apache-2.0](https://github.com/buluma/ansible-role-snmpd/blob/master/LICENSE)
 
 ## [Author Information](#author-information)
 
-[buluma](https://buluma.github.io/)
+[Shadow Walker](https://buluma.github.io/)
 
-Please consider [sponsoring me](https://github.com/sponsors/buluma).
-
-### [Special Thanks](#special-thanks)
 
 Template inspired by [Robert de Bock](https://github.com/robertdebock)

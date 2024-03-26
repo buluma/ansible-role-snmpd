@@ -14,8 +14,8 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 ---
 - name: converge
   hosts: all
-  become: yes
-  gather_facts: yes
+  become: true
+  gather_facts: true
 
   roles:
     - role: buluma.snmpd
@@ -27,8 +27,8 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
 ---
 - name: prepare
   hosts: all
-  become: yes
-  gather_facts: no
+  become: true
+  gather_facts: false
 
   roles:
     - role: buluma.bootstrap
@@ -78,7 +78,7 @@ snmpd_accesses:
 snmpd_syslocation: Unknown
 snmpd_syscontact: Root <root@localhost>
 
-snmpd_dontlogtcpwrappersconnects: "yes"
+snmpd_dontlogtcpwrappersconnects: "true"
 
 # snmpd_processes:
 #   - name: mountd

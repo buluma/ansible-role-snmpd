@@ -35,7 +35,7 @@ snmpd_accesses:
 snmpd_syslocation: Unknown
 snmpd_syscontact: Root <root@localhost>
 
-snmpd_dontlogtcpwrappersconnects: "yes"
+snmpd_dontlogtcpwrappersconnects: "true"
 
 # snmpd_processes:
 #   - name: mountd

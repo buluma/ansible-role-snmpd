@@ -5,7 +5,7 @@
     that:
       - snmpd_security_names is defined
       - snmpd_security_names is iterable
-    quiet: yes
+    quiet: true
 
 - name: assert | Test if item in snmpd_security_names is set correctly
   ansible.builtin.assert:
@@ -16,7 +16,7 @@
       - item.source is string
       - item.community is defined
       - item.community is string
-    quiet: yes
+    quiet: true
   loop: "{{ snmpd_security_names }}"
   loop_control:
     label: "{{ item.name }}"
@@ -26,7 +26,7 @@
     that:
       - snmpd_groups is defined
       - snmpd_groups is iterable
-    quiet: yes
+    quiet: true
 
 - name: assert | Test if item in snmpd_groups is set correctly
   ansible.builtin.assert:
@@ -39,7 +39,7 @@
       - item.security_name is defined
       - item.security_name is string
       # - item.security_name in snmpd_security_names
-    quiet: yes
+    quiet: true
   loop: "{{ snmpd_groups }}"
   loop_control:
     label: "{{ item.name }}"
@@ -49,7 +49,7 @@
     that:
       - snmpd_views is defined
       - snmpd_views is iterable
-    quiet: yes
+    quiet: true
 
 - name: assert | Test if item in snmpd_views is set correctly
   ansible.builtin.assert:
@@ -61,7 +61,7 @@
       - item.type in [ "included", "excluded" ]
       - item.subtree is defined
       - item.subtree is string
-    quiet: yes
+    quiet: true
   loop: "{{ snmpd_views }}"
   loop_control:
     label: "{{ item.name }}"
@@ -71,7 +71,7 @@
     that:
       - snmpd_accesses is defined
       - snmpd_accesses is iterable
-    quiet: yes
+    quiet: true
 
 - name: assert | Test if item in snmpd_accesses is set correctly
   ansible.builtin.assert:
@@ -94,7 +94,7 @@
       - item.write is string
       - item.notif is defined
       - item.notif is string
-    quiet: yes
+    quiet: true
   loop: "{{ snmpd_accesses }}"
   loop_control:
     label: "{{ item.group }}"
@@ -104,28 +104,28 @@
     that:
       - snmpd_syslocation is defined
       - snmpd_syslocation is iterable
-    quiet: yes
+    quiet: true
 
 - name: assert | Test if snmpd_syscontact is set correctly
   ansible.builtin.assert:
     that:
       - snmpd_syscontact is defined
       - snmpd_syscontact is iterable
-    quiet: yes
+    quiet: true
 
 - name: assert | Test if snmpd_dontlogtcpwrappersconnects is set correctly
   ansible.builtin.assert:
     that:
       - snmpd_dontlogtcpwrappersconnects is defined
       - snmpd_dontlogtcpwrappersconnects is string
-      - snmpd_dontlogtcpwrappersconnects in [ "no", "yes" ]
-    quiet: yes
+      - snmpd_dontlogtcpwrappersconnects in [ "false", "true" ]
+    quiet: true
 
 - name: assert | Test if snmpd_processes is set correctly
   ansible.builtin.assert:
     that:
       - snmpd_processes is iterable
-    quiet: yes
+    quiet: true
   when:
     - snmpd_processes is defined
 
@@ -134,7 +134,7 @@
     that:
       - item.name is defined
       - item.name is string
-    quiet: yes
+    quiet: true
   loop: "{{ snmpd_processes }}"
   loop_control:
     label: "{{ item.name }}"
@@ -145,7 +145,7 @@
   ansible.builtin.assert:
     that:
       - item.minimum is number
-    quiet: yes
+    quiet: true
   loop: "{{ snmpd_processes }}"
   loop_control:
     label: "{{ item.name }}"
@@ -157,7 +157,7 @@
   ansible.builtin.assert:
     that:
       - item.maximum is number
-    quiet: yes
+    quiet: true
   loop: "{{ snmpd_processes }}"
   loop_control:
     label: "{{ item.name }}"
@@ -169,7 +169,7 @@
   ansible.builtin.assert:
     that:
       - snmpd_scripts is iterable
-    quiet: yes
+    quiet: true
   when:
     - snmpd_scripts is defined
 
@@ -182,7 +182,7 @@
       - item.program is string
       - item.arguments is defined
       - item.arguments is string
-    quiet: yes
+    quiet: true
   loop: "{{ snmpd_scripts }}"
   loop_control:
     label: "{{ item.name }}"
@@ -193,7 +193,7 @@
   ansible.builtin.assert:
     that:
       - snmpd_disks is iterable
-    quiet: yes
+    quiet: true
   when:
     - snmpd_disks is defined
 
@@ -202,7 +202,7 @@
     that:
       - item.path is defined
       - item.path is string
-    quiet: yes
+    quiet: true
   loop: "{{ snmpd_disks }}"
   loop_control:
     label: "{{ item.path }}"
@@ -213,7 +213,7 @@
   ansible.builtin.assert:
     that:
       - item.minimum is number
-    quiet: yes
+    quiet: true
   loop: "{{ snmpd_disks }}"
   loop_control:
     label: "{{ item.path }}"
@@ -231,6 +231,6 @@
       - snmpd_load.five_minute_average is number
       - snmpd_load.fifteen_minute_average is defined
       - snmpd_load.fifteen_minute_average is number
-    quiet: yes
+    quiet: true
   when:
     - snmpd_load is defined

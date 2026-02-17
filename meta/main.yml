@@ -1,3 +1,4 @@
+---
 galaxy_info:
   author: buluma
   role_name: snmpd
@@ -6,9 +7,9 @@ galaxy_info:
   company: none
   min_ansible_version: '2.12'
   platforms:
-  - name: Alpine
-    versions:
-    - all
+    - name: Alpine
+      versions:
+        - all
   - name: Amazon
     versions:
     - all
@@ -28,5 +29,5 @@ galaxy_info:
     versions:
     - all
   galaxy_tags:
-  - snmpd
+    - snmpd
 dependencies: []

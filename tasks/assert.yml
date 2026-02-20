@@ -1,5 +1,4 @@
 ---
-
 - name: assert | Test if snmpd_security_names is set correctly
   ansible.builtin.assert:
     that:

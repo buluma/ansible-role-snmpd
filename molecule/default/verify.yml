@@ -1,35 +1,36 @@
 ---
-- name: Verify
-  hosts: all
-  become: true
-  gather_facts: true
+  - name: Verify
+    hosts: all
+    become: true
+    gather_facts: true
 
-  vars:
-    _snmpd_snmpwalk_package:
-      default:
-        - snmp
-      Alpine:
-        - net-snmp-tools
-      RedHat: &redhat_snmpwalk_package
-        - net-snmp-utils
-      Rocky: *redhat_snmpwalk_package
-      Suse:
-        - net-snmp
-    snmpd_snmpwalk_package: "{{ _snmpd_snmpwalk_package[ansible_os_family] | default(_snmpd_snmpwalk_package['default']) }}"
+    vars:
+      _snmpd_snmpwalk_package:
+        default:
+          - snmp
+        Alpine:
+          - net-snmp-tools
+        RedHat: &redhat_snmpwalk_package
+          - net-snmp-utils
+        Rocky: *redhat_snmpwalk_package
+        Suse:
+          - net-snmp
+      snmpd_snmpwalk_package: "{{ _snmpd_snmpwalk_package[ansible_os_family] | default(_snmpd_snmpwalk_package['default'])
+        }}"
 
-  tasks:
-    - name: Install snmpwalk
-      ansible.builtin.package:
-        name: "{{ snmpd_snmpwalk_package }}"
-      notify:
-        - Remove snmpwalk
+    tasks:
+      - name: Install snmpwalk
+        ansible.builtin.package:
+          name: "{{ snmpd_snmpwalk_package }}"
+        notify:
+          - Remove snmpwalk
 
-    - name: Try snmpwalk
-      ansible.builtin.command:
-        cmd: snmpwalk -v1 -c public localhost
+      - name: Try snmpwalk
+        ansible.builtin.command:
+          cmd: snmpwalk -v1 -c public localhost
 
-  handlers:
-    - name: Remove snmpwalk
-      ansible.builtin.package:
-        name: "{{ snmpd_snmpwalk_package }}"
-        state: absent
+    handlers:
+      - name: Remove snmpwalk
+        ansible.builtin.package:
+          name: "{{ snmpd_snmpwalk_package }}"
+          state: absent

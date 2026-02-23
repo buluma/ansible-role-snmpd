@@ -12,26 +12,26 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 
 ```yaml
 ---
-  - name: converge
-    hosts: all
-    become: true
-    gather_facts: true
+- name: converge
+  hosts: all
+  become: true
+  gather_facts: true
 
-    roles:
-      - role: buluma.snmpd
+  roles:
+  - role: buluma.snmpd
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-snmpd/blob/master/molecule/default/prepare.yml):
 
 ```yaml
 ---
-  - name: prepare
-    hosts: all
-    become: true
-    gather_facts: false
+- name: prepare
+  hosts: all
+  become: true
+  gather_facts: false
 
-    roles:
-      - role: buluma.bootstrap
+  roles:
+  - role: buluma.bootstrap
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
@@ -45,35 +45,35 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 # defaults file for snmpd
 
 snmpd_security_names:
-  - name: notConfigUser
-    source: default
-    community: public
+- name: notConfigUser
+  source: default
+  community: public
 
 snmpd_groups:
-  - name: notConfigGroup
-    security_model: v1
-    security_name: notConfigUser
-  - name: NotConfigGroup
-    security_model: v2c
-    security_name: NotConfigUser
+- name: notConfigGroup
+  security_model: v1
+  security_name: notConfigUser
+- name: NotConfigGroup
+  security_model: v2c
+  security_name: NotConfigUser
 
 snmpd_views:
-  - name: systemview
-    type: included
-    subtree: ".1.3.6.1.2.1.1"
-  - name: systemview
-    type: included
-    subtree: ".1.3.6.1.2.1.25.1.1"
+- name: systemview
+  type: included
+  subtree: ".1.3.6.1.2.1.1"
+- name: systemview
+  type: included
+  subtree: ".1.3.6.1.2.1.25.1.1"
 
 snmpd_accesses:
-  - group: notConfigGroup
-    context: ""
-    security_model: any
-    security_level: noauth
-    prefix: exact
-    read: systemview
-    write: none
-    notif: none
+- group: notConfigGroup
+  context: ""
+  security_model: any
+  security_level: noauth
+  prefix: exact
+  read: systemview
+  write: none
+  notif: none
 
 snmpd_syslocation: Unknown
 snmpd_syscontact: Root <root@localhost>
@@ -94,8 +94,8 @@ snmpd_dontlogtcpwrappersconnects: "true"
 #     arguments: /tmp/shtest
 
 snmpd_disks:
-  - path: /
-    minimum: 10000
+- path: /
+  minimum: 10000
 
 snmpd_load:
   one_minute_average: 12

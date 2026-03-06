@@ -9,6 +9,10 @@
 - Update action [\#12](https://github.com/buluma/ansible-role-snmpd/issues/12)
 - rebuild action [\#11](https://github.com/buluma/ansible-role-snmpd/issues/11)
 
+**Merged pull requests:**
+
+- Bump docker/setup-buildx-action from 3 to 4 [\#18](https://github.com/buluma/ansible-role-snmpd/pull/18) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v24.3.31](https://github.com/buluma/ansible-role-snmpd/tree/v24.3.31) (2024-03-29)
 
 [Full Changelog](https://github.com/buluma/ansible-role-snmpd/compare/v0.3.0...v24.3.31)

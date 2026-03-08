@@ -7,30 +7,31 @@
   vars:
     _snmpd_snmpwalk_package:
       default:
-      - snmp
+        - snmp
       Alpine:
-      - net-snmp-tools
+        - net-snmp-tools
       RedHat: &redhat_snmpwalk_package
-      - net-snmp-utils
+        - net-snmp-utils
       Rocky: *redhat_snmpwalk_package
       Suse:
-      - net-snmp
-    snmpd_snmpwalk_package: "{{ _snmpd_snmpwalk_package[ansible_os_family] | default(_snmpd_snmpwalk_package['default'])
+        - net-snmp
+    snmpd_snmpwalk_package:
+      "{{ _snmpd_snmpwalk_package[ansible_os_family] | default(_snmpd_snmpwalk_package['default'])
       }}"
 
   tasks:
-  - name: Install snmpwalk
-    ansible.builtin.package:
-      name: "{{ snmpd_snmpwalk_package }}"
-    notify:
-    - Remove snmpwalk
+    - name: Install snmpwalk
+      ansible.builtin.package:
+        name: "{{ snmpd_snmpwalk_package }}"
+      notify:
+        - Remove snmpwalk
 
-  - name: Try snmpwalk
-    ansible.builtin.command:
-      cmd: snmpwalk -v1 -c public localhost
+    - name: Try snmpwalk
+      ansible.builtin.command:
+        cmd: snmpwalk -v1 -c public localhost
 
   handlers:
-  - name: Remove snmpwalk
-    ansible.builtin.package:
-      name: "{{ snmpd_snmpwalk_package }}"
-      state: absent
+    - name: Remove snmpwalk
+      ansible.builtin.package:
+        name: "{{ snmpd_snmpwalk_package }}"
+        state: absent

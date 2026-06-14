@@ -28,6 +28,7 @@
 
     - name: Try snmpwalk
       ansible.builtin.command:
+      changed_when: false
         cmd: snmpwalk -v1 -c public localhost
 
   handlers:

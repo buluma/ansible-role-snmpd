@@ -16,7 +16,7 @@
       Suse:
         - net-snmp
     snmpd_snmpwalk_package:
-      "{{ _snmpd_snmpwalk_package[ansible_facts.os_family] | default(_snmpd_snmpwalk_package['default'])
+      "{{ _snmpd_snmpwalk_package[ansible_facts['os_family']] | default(_snmpd_snmpwalk_package['default'])
       }}"
 
   tasks:

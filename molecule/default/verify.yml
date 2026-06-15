@@ -15,9 +15,7 @@
       Rocky: *redhat_snmpwalk_package
       Suse:
         - net-snmp
-    snmpd_snmpwalk_package:
-      "{{ _snmpd_snmpwalk_package[ansible_facts['os_family']] | default(_snmpd_snmpwalk_package['default'])
-      }}"
+    snmpd_snmpwalk_package: "{{ _snmpd_snmpwalk_package[ansible_facts['os_family']] | default(_snmpd_snmpwalk_package['default']) }}"
 
   tasks:
     - name: Install snmpwalk
@@ -28,8 +26,8 @@
 
     - name: Try snmpwalk
       ansible.builtin.command:
-      changed_when: false
         cmd: snmpwalk -v1 -c public localhost
+      changed_when: false
 
   handlers:
     - name: Remove snmpwalk

@@ -1,5 +1,9 @@
 # Changelog
 
+## [v26.6.1](https://github.com/buluma/ansible-role-snmpd/tree/v26.6.1) (2026-07-21)
+
+[Full Changelog](https://github.com/buluma/ansible-role-snmpd/compare/v26.6.0...v26.6.1)
+
 ## [v26.6.0](https://github.com/buluma/ansible-role-snmpd/tree/v26.6.0) (2026-06-14)
 
 [Full Changelog](https://github.com/buluma/ansible-role-snmpd/compare/v24.3.31...v26.6.0)
